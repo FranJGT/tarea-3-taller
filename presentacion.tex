@@ -9,7 +9,7 @@
 \usepackage{fontawesome5} 
 \usepackage{lmodern} 
 
-% --- Configuración de Colores Premium (Paleta "Deep Ocean") ---
+% --- Configuración de Colores palera Deep Ocean ---
 \definecolor{primary}{RGB}{0, 45, 98}      
 \definecolor{secondary}{RGB}{0, 112, 192}  
 \definecolor{accent}{RGB}{255, 165, 0}     
@@ -37,12 +37,11 @@
 \setbeamertemplate{frametitle}{
     \vspace{0.2cm}
     \begin{beamercolorbox}[wd=\paperwidth,ht=1.2cm,dp=0.5cm,leftskip=0.5cm]{frametitle}
-        \Large \textbf{\insertframetitle} % Reducido de \Huge a \Large
+        \Large \textbf{\insertframetitle} 
         \ifx\insertframesubtitle\@empty\else
             \par\small\color{secondary}\insertframesubtitle
         \fi
     \end{beamercolorbox}
-    % Eliminada la línea decorativa inferior para evitar desbordes
 }
 
 % --- Cajas Personalizadas ---
@@ -202,9 +201,7 @@
 
         \column{0.4\textwidth}
         \centering
-        % --- CORRECCIÓN 1: Color del texto forzado ---
         \begin{tcolorbox}[enhanced, colback=black!85, colframe=black, title=\textbf{Stack Tecnológico}, shadow={2mm}{-2mm}{0mm}{black!30}]
-            % Forzamos el color blanco explícitamente dentro de la caja y para los items
             \color{white}
             \setbeamercolor{itemize item}{fg=white}
             \setbeamercolor{item}{fg=white}
@@ -238,7 +235,6 @@
         
         \column{0.35\textwidth}
         \centering
-        % --- CORRECCIÓN 2: 'transform shape' para arreglar el zoom ---
         \begin{tikzpicture}[scale=0.7, transform shape] 
             \node[circle, fill=green!20, draw=green, thick, minimum size=1.2cm] (safe) at (0,0) {\footnotesize Seguro};
             \node[circle, fill=red!20, draw=red, thick, minimum size=1.2cm] (risk) at (2.5,0) {\footnotesize Riesgo};
