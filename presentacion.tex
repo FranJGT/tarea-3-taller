@@ -96,10 +96,15 @@
     \vspace{0.3cm}
     \Large \textit{Optimizando Rutas con Inteligencia Artificial}
     \vspace{1.5cm}
-    \begin{tcolorbox}[enhanced, colback=white!10, colframe=white, width=0.6\textwidth, arc=10pt, boxrule=0pt]
-        \centering \color{white} \textbf{Actividad 2 - Policy Gradient}
-    \end{tcolorbox}
-    \vspace{1cm}
+
+        \large \textbf{Grupo: IA India de Hevia}\\[0.2cm]
+        \small Integrantes:\\
+        Benjamín Camus\\
+        Nicolás Armijo\\
+        Francisco González\\
+        Giovanni Mealla
+        
+        \vspace{0.8cm}
     \small \today
 \end{frame}
 }
@@ -114,7 +119,7 @@
         \vspace{0.5cm}
         \textbf{\faExclamationTriangle \ Dificultades del Entorno:}
         \begin{itemize}
-            \item \textbf{Obstáculos ("Hoyos"):} Terminan el episodio inmediatamente (Castigo -1.0).
+            \item \textbf{Obstáculos (``Hoyos''):} Terminan el episodio inmediatamente (Castigo -1.0).
             \item \textbf{Recompensas:} Meta principal (+1.0) y Objeto opcional (+0.7).
         \end{itemize}
         \column{0.35\textwidth}
@@ -135,17 +140,49 @@
 \end{frame}
 
 % --- Diapositiva 3: La Estrategia ---
-\begin{frame}{La Estrategia (Proceso Empresarial)}
-    \begin{alertblock}{Cambio de Paradigma}
-        Abandonamos la programación imperativa ("Si X, haz Y") por un enfoque de \textbf{Aprendizaje Automático}.
-    \end{alertblock}
-    \vspace{0.5cm}
-    \begin{itemize}
-        \item[\faBrain] \textbf{Aprendizaje Empírico:} El agente no conoce las reglas físicas; las descubre interactuando (Prueba y Error).
-        \item[\faRedo] \textbf{Simulación Masiva:} Ejecución de \textbf{10,000 episodios} para refinar la política de toma de decisiones.
-        \item[\faChartLine] \textbf{Optimización:} El sistema mejora gradualmente buscando maximizar la recompensa total acumulada.
-    \end{itemize}
+% --- Proceso Empresarial ---
+\begin{frame}{Fase 2. Proceso Empresarial (Videojuegos e IA)}
+
+
+        % -------------------- OBJETIVO ESTRATÉGICO --------------------
+        \begin{premiumbox}{Objetivo Estratégico}
+            \small ¿Qué busca el negocio con IA dentro del videojuego?
+            \begin{itemize}
+                \item Crear un \textbf{comportamiento inteligente competitivo} que mejore la experiencia del jugador.
+                \item Reducir costos de diseño manual de niveles mediante \textbf{automatización del comportamiento enemigo}.
+                \item Incorporar IA que diferencie el producto frente a la competencia (mayor \textbf{engagement}).
+            \end{itemize}
+        \end{premiumbox}
+
+        \vspace{0.2cm}
+
 \end{frame}
+
+
+%3.1
+\begin{frame}
+            % -------------------- OBJETIVO OPERATIVO --------------------
+        \begin{premiumbox}{Objetivo Operativo}
+            \small ¿Cómo se implementará la IA dentro del proceso de producción?
+            \begin{itemize}
+                \item El agente REINFORCE decide la navegación óptima en un \textbf{mapa estilo dungeon / arena}.
+                \item Integración con el motor de juego (Unity/Unreal) mediante una capa de \textbf{estado–acción}.
+                \item Entrenamiento autónomo con más de \textbf{10.000 simulaciones internas} por episodio.
+            \end{itemize}
+        \end{premiumbox}
+
+        \vspace{0.2cm}
+                % --------------------ENTORNO --------------------
+        \begin{premiumbox}{Relación con el entorno}
+            \small El entorno de 9x9 simula:
+            \begin{itemize}
+                \item Toma de decisiones en mapas con \textbf{obstáculos}, rutas alternativas y objetos.
+                \item Un sistema de recompensas comparable a la \textbf{economía interna de un videojuego}.
+                \item Un jugador/enemigo que prioriza eficiencia y evita situaciones de riesgo.
+            \end{itemize}
+        \end{premiumbox}
+\end{frame}
+
 
 % --- Diapositiva 4: Solución Técnica ---
 \begin{frame}{Solución Técnica (Tecnología)}
@@ -153,7 +190,7 @@
         \column{0.55\textwidth}
         \textbf{Algoritmo: Policy Gradient (REINFORCE)}
         \vspace{0.3cm}
-        El "cerebro" del agente es una tabla de probabilidades (Softmax) que se ajusta dinámicamente.
+        El ``cerebro'' del agente es una tabla de probabilidades (Softmax) que se ajusta dinámicamente.
         \vspace{0.3cm}
         \begin{premiumbox}{Mecánica de Aprendizaje}
             \begin{enumerate}
@@ -185,7 +222,7 @@
 % --- Diapositiva 5: Resultados y Riesgos ---
 \begin{frame}{Resultados y Riesgos (Proceso de Cambio)}
     \begin{premiumbox}{Hallazgo Clave: Aversión al Riesgo}
-        El agente desarrolló un comportamiento \textbf{"Conservador"}.
+        El agente desarrolló un comportamiento \textbf{``Conservador''}.
     \end{premiumbox}
 
     \vspace{0.2cm}
@@ -195,7 +232,7 @@
         \footnotesize 
         \begin{itemize}
             \item \textbf{Observación:} El agente ignora sistemáticamente el objeto de bonificación (+0.7).
-            \item \textbf{Causa:} El objeto está rodeado de "hoyos". El riesgo de muerte (-1.0) supera la ganancia potencial.
+            \item \textbf{Causa:} El objeto está rodeado de ``hoyos''. El riesgo de muerte (-1.0) supera la ganancia potencial.
             \item \textbf{Conclusión:} El algoritmo prioriza la seguridad y el cumplimiento de la misión principal.
         \end{itemize}
         
